@@ -98,6 +98,12 @@ private:
      */
     void fill_channel_mask_with_value(uint16_t *channel_mask,
                                       uint16_t value, uint8_t size);
+protected:
+
+    /*!
+     * Previously used channel mask
+     */
+    uint16_t current_channel_mask[AU915_CHANNEL_MASK_SIZE];
 
 private:
 
@@ -115,11 +121,6 @@ private:
      * LoRaMac channel mask
      */
     uint16_t channel_mask[AU915_CHANNEL_MASK_SIZE];
-
-    /*!
-     * Previously used channel mask
-     */
-    uint16_t current_channel_mask[AU915_CHANNEL_MASK_SIZE];
 
     /*!
      * LoRaMac channels default mask
